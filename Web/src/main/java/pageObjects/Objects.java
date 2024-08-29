@@ -7,15 +7,15 @@ import org.openqa.selenium.support.FindBy;
 
 public class Objects extends Base {
 
-    public Objects(WebDriver driver){
+    public Objects(WebDriver driver) {
         super(driver);
     }
-    @FindBy(name="email")
+
+    @FindBy(name = "email")
     public WebElement email;
 
-    @FindBy(name="password")
+    @FindBy(name = "password")
     public WebElement password;
-
 
 
     public void emailAndPassword(String usn, String pwd) {

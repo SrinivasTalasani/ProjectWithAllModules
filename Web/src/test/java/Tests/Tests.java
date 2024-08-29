@@ -8,8 +8,8 @@ public class Tests extends Base {
 
 
     @Test
-    public void login(){
+    public void login() {
         Objects ob = new Objects(driver);
-       ob.emailAndPassword("karthik24","abc");
+        ob.emailAndPassword("karthik24", "abc");
     }
 }
