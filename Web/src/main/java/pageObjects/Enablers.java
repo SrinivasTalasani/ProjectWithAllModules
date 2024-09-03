@@ -51,7 +51,6 @@ public class Enablers extends Base {
 //        Coordinates cor = (Coordinates) ((Locatable) element).getCoordinates();
 //        cor.inViewPort();
 //    }
-
     /**
      * @Description: This method is used to scroll to the end of the page
      */
@@ -186,7 +185,6 @@ public class Enablers extends Base {
         }
 
     }
-
     /**
      * @Description: This method used to implement implicit wait
      */

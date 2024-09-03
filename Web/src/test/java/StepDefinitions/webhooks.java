@@ -6,12 +6,11 @@ import pageObjects.Base;
 
 public class webhooks extends Base {
     @Before
-    public void BeforeScenarios() {
+    public void BeforeScenarios(){
         launchBrowser();
     }
-
     @After
-    public void AfterScenario() {
+    public void AfterScenario(){
         closeBrowser();
     }
 

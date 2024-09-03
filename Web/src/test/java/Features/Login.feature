@@ -9,7 +9,7 @@ Feature: Test
     Then User verify home page
 
     Examples:
-      | username                 | password |
-      | karthik24annam@gmail.com | 12345678 |
+      |username|password|
+      |karthik24annam@gmail.com|12345678|
 
     ##################
