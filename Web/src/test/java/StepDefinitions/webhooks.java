@@ -2,7 +2,7 @@ package StepDefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import pageObjects.Base;
+import base.Base;
 
 public class webhooks extends Base {
     @Before

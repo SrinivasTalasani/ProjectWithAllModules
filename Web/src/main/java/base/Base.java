@@ -1,12 +1,9 @@
-package pageObjects;
+package base;
 
-
-//import cucumber.api.java.After;
-//import org.junit.Before;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class Base {
@@ -23,7 +20,7 @@ public class Base {
         this.driver = driver;
     }
 
-    //    @Before
+// @Before
     public void launchBrowser() {
         setupWebDriver();
 
@@ -31,14 +28,14 @@ public class Base {
 
     public WebDriver setupWebDriver() {
 //        System.setProperty("webdriver.edge.driver", "C:\\Users\\srini\\Downloads\\msedgedriver.exe");
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
-//        driver.get("https://www.ebay.com/");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("https://www.ebay.com/");
         driver.manage().window().maximize();
         return driver;
     }
 
-    //    @After
+//        @After
     public void closeBrowser() {
         driver.quit();
     }

@@ -1,0 +1,93 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-09-11T08:34:23.128Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7426392900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.webhooks.BeforeScenarios()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Test scenario",
+        "description": "",
+        "id": "test;test-scenario;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 272592700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.webhooks.AfterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 25699600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User navigate to URL",
+            "match": {
+              "location": "StepDefinitions.stepDefinition.user_navigate_to_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3336721300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters the product what is looking for\"clothes for men\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"clothes for men\"",
+                  "offset": 43
+                }
+              ],
+              "location": "StepDefinitions.stepDefinition.userEntersTheProductWhatIsLookingFor(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1200400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User verifies the page",
+            "match": {
+              "location": "StepDefinitions.stepDefinition.userVerifiesThePage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@productSearch"
+          }
+        ]
+      }
+    ],
+    "name": "Test",
+    "description": "",
+    "id": "test",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/Login.feature",
+    "tags": []
+  }
+]

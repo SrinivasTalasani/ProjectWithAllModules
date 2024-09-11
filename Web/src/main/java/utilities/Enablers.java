@@ -1,10 +1,15 @@
-package pageObjects;
+package utilities;
 
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import base.Base;
 
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class Enablers extends Base {
@@ -194,4 +199,78 @@ public class Enablers extends Base {
         wdriver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
     }
 
+
+
+public void selectClass(WebElement element){
+    Select select = new Select(driver.findElement(By.xpath("")));
+    select.selectByIndex(0);
+    select.selectByValue("Ramu");
+    select.selectByVisibleText("dfdsvfds");
+    select.deselectAll();
+    WebElement option = select.getFirstSelectedOption();
+    String defaultItem = option.getText();
+    System.out.println(defaultItem );
+
+
+
+//
+
+
+
+
+    WebElement element3 = driver.findElement(By.xpath("dfdj"));
+    WebElement option1= (WebElement) driver.findElements(By.cssSelector("select option/ul"));
+    element3.getText();
+    element3.click();
+//thirjforb eguorgf
+
+//    for(WebElement el:allOptions) {
+//
+//        if (el.getText().contains(option1)) {
+
+//            el.click();
+        }
+
+
+    public void actionClass(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click();
+        actions.moveToElement(element).build().perform();
+        actions.doubleClick(element).perform();
+
+        actions.sendKeys(element,"gjidfg");
+
+        //WebElement on which drag and drop operation needs to be performed
+        WebElement fromElement = driver.findElement(By.xpath("Locator of toElement"));
+
+//WebElement to which the above object is dropped
+        WebElement toElement = driver.findElement(By.xpath("Locator of toElement"));
+//Building a drag and drop action
+      actions.dragAndDrop(fromElement,toElement).build().perform();
+
+//Performing the drag and drop action
+
+        element.sendKeys("dgjkdfmg");
+
+    }
+
+
+    public void alertClass() {
+
+        Alert alert = driver.switchTo().alert();
+        alert.getText();
+        alert.sendKeys("fgdf");
+        alert.accept();
+        alert.dismiss();
+        String originalWindow = driver.getWindowHandle();
+        Set<String> allWindows = driver.getWindowHandles();
+
+// Switch to the new window
+        for (String windowHandle : allWindows) {
+            if (!windowHandle.equals(originalWindow)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
+    }
 }

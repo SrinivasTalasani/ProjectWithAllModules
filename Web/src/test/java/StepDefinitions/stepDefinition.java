@@ -4,9 +4,7 @@ package StepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import pageObjects.Base;
+import base.Base;
 import pageObjects.Objects;
 
 
@@ -22,7 +20,7 @@ public class stepDefinition extends Base {
 
     @Given("User navigate to URL")
     public void user_navigate_to_url() {
-        driver.get("https://www.ebay.com/");
+        System.out.println("Launched browser with URL");
     }
 
     @When("User enters the product what is looking for{string}")
